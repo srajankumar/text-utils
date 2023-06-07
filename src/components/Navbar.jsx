@@ -8,7 +8,7 @@ const Navbar = (props) => {
           props.mode
         } body-font`}
       >
-        <div className="container mx-auto flex flex-wrap p-5 flex-row items-center">
+        <div className="container mx-auto flex justify-between flex-wrap p-5 flex-row items-center">
           <a className="flex title-font font-medium items-center mb-4 md:mb-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -24,13 +24,12 @@ const Navbar = (props) => {
             </svg>
             <span className="ml-3 text-xl">{props.title}</span>
           </a>
-          <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <a className="mr-5">Home</a>
+          <nav className="mb-4 md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
             <a className="mr-5">About</a>
           </nav>
           <button
             onClick={props.toggleMode}
-            className="inline-flex items-center border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0"
+            className="inline-flex mb-4 items-center border-0 px-3 focus:outline-none rounded text-base"
           >
             {props.modeText}
           </button>

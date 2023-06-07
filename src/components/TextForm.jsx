@@ -36,7 +36,7 @@ const TextForm = (props) => {
 
   return (
     <div
-      className={`text-${props.mode == "white" ? "black" : "white"} bg-${
+      className={`text-${props.mode === "white" ? "black" : "white"} bg-${
         props.mode
       } min-h-[89.3vh]`}
     >
@@ -55,12 +55,10 @@ const TextForm = (props) => {
               value={text}
               onChange={handleOnChange}
               className={`${
-                props.mode == "white" ? "bg-black" : "bg-gray-400"
-              } w-full bg-gray-100 border border-transparent bg-opacity-10 rounded focus:${
-                props.mode == "white"
-                  ? "border-indigo-900"
-                  : "border-indigo-500"
-              } text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
+                props.mode === "white"
+                  ? "bg-black bg-opacity-10 focus:border-indigo-900"
+                  : "bg-gray-400 bg-opacity-30 focus:border-indigo-500"
+              } w-full border border-transparent rounded text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
               // className="w-full bg-gray-100 bg-opacity-10 rounded border border-gray-300 focus:border-indigo-300 focus:bg-transparent text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
