@@ -4,12 +4,15 @@ const Navbar = (props) => {
   return (
     <div>
       <header
-        className={`text-${props.mode == "white" ? "black" : "white"} bg-${
+        className={`text-${props.mode === "white" ? "black" : "white"} bg-${
           props.mode
         } body-font`}
       >
         <div className="container mx-auto flex justify-between flex-wrap p-5 flex-row items-center">
-          <a className="flex title-font font-medium items-center mb-4 md:mb-0">
+          <a
+            href="/"
+            className="flex title-font font-medium items-center mb-4 md:mb-0"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -25,7 +28,9 @@ const Navbar = (props) => {
             <span className="ml-3 text-xl">{props.title}</span>
           </a>
           <nav className="mb-4 md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <a className="mr-5">About</a>
+            <a href="/about" className="mr-5">
+              About
+            </a>
           </nav>
           <button
             onClick={props.toggleMode}
