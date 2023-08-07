@@ -1,4 +1,3 @@
-import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from "react";
@@ -63,7 +62,6 @@ function App() {
         toggleMode={toggleMode}
       />
       <TextForm mode={mode} heading="Enter the text to analyze" />
-      {/* <About /> */}
     </div>
   );
 }

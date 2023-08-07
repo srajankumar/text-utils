@@ -15,23 +15,21 @@ const Navbar = (props) => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+              width="30"
+              height="30"
               viewBox="0 0 24 24"
             >
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 7V5h13v2m-6-2v14m2 0H8m7-6v-1h6v1m-3-1v7m-1 0h2"
+              />
             </svg>
             <span className="ml-3 text-xl">{props.title}</span>
           </a>
-          <nav className="mb-4 md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <a href="/about" className="mr-5">
-              About
-            </a>
-          </nav>
           <button
             onClick={props.toggleMode}
             className="inline-flex mb-4 items-center border-0 px-3 focus:outline-none rounded text-base"
